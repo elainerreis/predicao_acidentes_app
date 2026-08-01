@@ -32,12 +32,8 @@ O modelo foi treinado utilizando dados públicos da Polícia Rodoviária Federal
 
 # Demonstração
 
-> **Em breve**
-
-Após a publicação será possível acessar a aplicação diretamente pelo navegador.
-
 ```
-https://xxxxx.hf.space
+https://predicaoacidentesapp.streamlit.app/
 ```
 
 ---
@@ -46,11 +42,14 @@ https://xxxxx.hf.space
 
 ## Página Inicial
 
+## Página Inicial
+
 <p align="center">
-
-<img src="assets/images/home.png" width="900">
-
+  <img src="assets/images/home1.png" width="48%" alt="Página inicial — parte 1">
+  <img src="assets/images/home2.png" width="48%" alt="Página inicial — parte 2">
 </p>
+
+---
 
 ---
 
