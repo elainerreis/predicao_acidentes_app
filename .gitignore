@@ -50,3 +50,4 @@ models/metadata.pkl
 
 # Dados grandes (caso não queira versioná-los)
 data/acidentes_frota_17-25.csv
+teste_loader_huggingface.py
