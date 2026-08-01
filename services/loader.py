@@ -6,7 +6,6 @@ e os metadados utilizados na predição.
 """
 
 import os
-from pathlib import Path
 from typing import Any
 
 import joblib
@@ -15,13 +14,9 @@ from huggingface_hub import hf_hub_download
 from xgboost import XGBClassifier
 
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
-MODELS_DIR = ROOT_DIR / "models"
-
 HF_REPO_ID = "elainerreis/predicao_acidentes"
-HF_MODEL_FILENAME = "amostra_modelo_xgboost_final.ubj"
-
-METADATA_PATH = MODELS_DIR / "amostra_metadata.pkl"
+HF_MODEL_FILENAME = "modelo_xgboost_final.ubj"
+HF_METADATA_FILENAME = "metadata.pkl"
 
 
 @st.cache_resource(
@@ -54,23 +49,23 @@ def load_model() -> XGBClassifier:
 @st.cache_resource(show_spinner=False)
 def load_metadata() -> dict[str, Any]:
     """
-    Carrega os metadados usados para preparar
-    os dados da predição.
+    Baixa o metadata do Hugging Face.
     """
 
-    if not METADATA_PATH.exists():
-        raise FileNotFoundError(
-            f"Metadata não encontrado: {METADATA_PATH}"
-        )
+    token = os.getenv("HF_TOKEN")
 
-    metadata = joblib.load(
-        METADATA_PATH
+    metadata_path = hf_hub_download(
+        repo_id=HF_REPO_ID,
+        filename=HF_METADATA_FILENAME,
+        repo_type="model",
+        token=token,
     )
+
+    metadata = joblib.load(metadata_path)
 
     if not isinstance(metadata, dict):
         raise TypeError(
-            "O arquivo metadata.pkl deve conter "
-            "um dicionário."
+            "O arquivo metadata deve conter um dicionário."
         )
 
     return metadata
