@@ -36,11 +36,17 @@ __pycache__/
 *.bak
 
 # Modelos locais (caso não queira versioná-los)
-# models/*.pkl 
-
-
-
+models/data_splits.pkl 
+models/amostra_data_splits.pkl 
+models/modelo_xgboost_final.pkl
+models/modelo_xgboost_final.ubj
+models/shap_values_cache.pkl
+models/amostra_shap_values_cache.pkl
+models/amostra_modelo_xgboost_final.pkl
+models/amostra_preprocess.pkl
+models/amostra_modelo_xgboost_final.ubj
+models/metadata.pkl
 # models/*.ubj
 
 # Dados grandes (caso não queira versioná-los)
-# data/*.csv
+data/acidentes_frota_17-25.csv

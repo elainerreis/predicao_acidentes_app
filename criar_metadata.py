@@ -16,12 +16,12 @@ MODELS_DIR = ROOT_DIR / "models"
 
 DATA_SPLITS_PATH = (
     MODELS_DIR
-    / "data_splits.pkl"
+    / "amostra_data_splits.pkl"
 )
 
 METADATA_PATH = (
     MODELS_DIR
-    / "metadata.pkl"
+    / "amostra_metadata.pkl"
 )
 
 
