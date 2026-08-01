@@ -15,8 +15,8 @@ from xgboost import XGBClassifier
 
 
 HF_REPO_ID = "elainerreis/predicao_acidentes"
-HF_MODEL_FILENAME = "modelo_xgboost_final.ubj"
-HF_METADATA_FILENAME = "metadata.pkl"
+HF_MODEL_FILENAME = "amostra_modelo_xgboost_final.ubj"
+HF_METADATA_FILENAME = "amostra_metadata.pkl"
 
 
 @st.cache_resource(

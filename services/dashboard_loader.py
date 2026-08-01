@@ -12,7 +12,7 @@ import os
 from huggingface_hub import hf_hub_download
 
 HF_REPO_ID = "elainerreis/predicao_acidentes"
-HF_DATA_FILENAME = "acidentes_frota_17-25.csv"
+HF_DATA_FILENAME = "amostra_17-25.csv"
 
 
 @st.cache_data(show_spinner=False)
