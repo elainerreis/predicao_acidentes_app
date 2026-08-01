@@ -32,16 +32,17 @@ def show_global_shap_analysis() -> None:
         """
 ### Como interpretar o gráfico
 
-O gráfico apresenta a importância global das variáveis por meio da
-média dos valores absolutos de SHAP.
+O gráfico apresenta a importância global das variáveis estimada pelo 
+SHAP (SHapley Additive exPlanations), considerando o impacto 
+médio absoluto de cada atributo nas previsões do modelo.
+Assim, ele indica o quanto cada variável influencia as decisões do modelo, 
+mas não se essa influência aumenta ou reduz a probabilidade de um acidente grave. 
+A direção do impacto pode ser observada nas explicações individuais da página de predição.
 
-Variáveis com barras maiores tiveram maior participação média nas
-decisões do modelo. Essa visualização representa a magnitude da
-influência, mas não informa isoladamente se cada variável aumentou
-ou reduziu a probabilidade estimada.
-
-Os resultados representam associações aprendidas pelo modelo a partir
-dos registros históricos e não devem ser interpretados como relações
-diretas de causa e efeito.
+Observa-se que o tipo de veículo é a variável de maior impacto, 
+seguido pelo trecho da rodovia (BR + KM), frota municipal e 
+rodovia (BR). Esses resultados sugerem que tanto as características do 
+veículo quanto o contexto geográfico e a infraestrutura da via desempenham 
+papel relevante na estimativa da gravidade dos acidentes.
 """
     )

@@ -48,7 +48,6 @@ st.info(
 
     Para otimizar o desempenho da aplicação, este dashboard utiliza uma
     amostra aleatória de aproximadamente **10% da base utilizada para treinar o modelo**.
-    Essa amostra é utilizada **apenas para exploração dos dados**.
 
     """
 )
