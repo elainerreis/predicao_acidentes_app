@@ -18,6 +18,13 @@ from components.predict_hero import show_prediction_hero
 # =========================================================
 
 show_prediction_hero()
+st.info(
+    """
+    Esta versão demonstrativa utiliza um modelo treinado com uma amostra
+    de 10% dos dados disponíveis. Os resultados devem ser interpretados
+    como uma prova de conceito.
+    """
+)
 
 st.markdown("## Simulação do cenário")
 
