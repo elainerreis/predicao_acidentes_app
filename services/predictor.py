@@ -1,34 +1,20 @@
 """
 predictor.py
 
-Executa a predição e retorna os resultados utilizados
-na apresentação e na interpretação do cenário.
+Executa a predição e calcula as contribuições
+locais utilizando o XGBoost.
 """
 
-from services.loader import (
-    load_artifacts,
-    load_explainer,
-)
-
+from services.loader import load_artifacts
 from services.feature_engineering import build_features
 from services.explainer import explain_prediction
 
 
 def predict(
     dados: dict,
-    gerar_explicacao: bool = True,
 ) -> dict:
     """
-    Realiza a predição da gravidade para o cenário informado.
-
-    Parameters
-    ----------
-    dados:
-        Dados preenchidos pelo usuário.
-
-    gerar_explicacao:
-        Quando True, calcula a explicação SHAP.
-        Quando False, realiza apenas a predição.
+    Realiza a predição e gera a explicação local.
     """
 
     artifacts = load_artifacts()
@@ -45,18 +31,13 @@ def predict(
     )
 
     classe = int(
-        model.predict(X)[0]
+        probabilidade >= 0.5
     )
 
-    explanation = None
-
-    if gerar_explicacao:
-        explainer = load_explainer()
-
-        explanation = explain_prediction(
-            explainer,
-            X,
-        )
+    explanation = explain_prediction(
+        model,
+        X,
+    )
 
     return {
         "classe": classe,
