@@ -278,4 +278,3 @@ LinkedIn: *[https://www.linkedin.com/in/elainerreiss](https://www.linkedin.com/i
 Projeto desenvolvido para fins acadêmicos como Trabalho de Conclusão de Curso.
 
 Os dados utilizados são públicos e pertencem aos respectivos órgãos governamentais.
-# predicao_acidentes_app
