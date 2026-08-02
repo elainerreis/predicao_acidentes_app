@@ -41,6 +41,7 @@ models/
 
 # Dados grandes (caso não queira versioná-los)
 data/
+utils/
 
 converter_modelo.py
 criar_metadata.py

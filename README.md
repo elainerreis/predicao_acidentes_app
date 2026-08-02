@@ -42,8 +42,6 @@ https://predicaoacidentesapp.streamlit.app/
 
 ## Página Inicial
 
-## Página Inicial
-
 <p align="center">
   <img src="assets/images/home1.png" width="48%" alt="Página inicial — parte 1">
   <img src="assets/images/home2.png" width="48%" alt="Página inicial — parte 2">
@@ -51,33 +49,24 @@ https://predicaoacidentesapp.streamlit.app/
 
 ---
 
----
-
 ## Dashboard
 
 <p align="center">
-
-<img src="assets/images/dashboard.png" width="900">
-
+  <img src="assets/images/dash1.png" width="48%" alt="Dashboard — parte 1">
+  <img src="assets/images/dash2.png" width="48%" alt="Dashboard — parte 2">
+  <img src="assets/images/dash3.png" width="48%" alt="Dashboard — parte 3">
 </p>
 
 ---
 
-## Predição
+## Predição e Explicação SHAP
 
 <p align="center">
 
-<img src="assets/images/predicao.png" width="900">
-
+<p align="center">
+  <img src="assets/images/predict1.png" width="48%" alt="Predicao — parte 1">
+  <img src="assets/images/predict2.png" width="48%" alt="Predicao — parte 2">
 </p>
-
----
-
-## Explicação SHAP
-
-<p align="center">
-
-<img src="assets/images/shap.png" width="900">
 
 </p>
 
@@ -102,13 +91,16 @@ Permite informar características do acidente, como:
 - UF
 - Rodovia
 - Quilômetro
-- Tipo de veículo
-- Fase do dia
-- Condições meteorológicas
+- Frota do município
 - Tipo de pista
 - Traçado da via
-- Uso do solo
-- Frota do município
+- Perimetro urbano
+- Ano
+- Dia da Semana
+- Fase do dia
+- Condições meteorológicas
+- Sentido da via
+- Tipo de veículo
 
 e obter:
 
@@ -158,73 +150,37 @@ Os dados utilizados são públicos.
 
 ---
 
-# 🔄 Fluxo da aplicação
-
-<p align="center">
-
-<img src="assets/images/pipeline_app.png" width="900">
-
-</p>
-
-Fluxo simplificado:
-
-```
-Usuário
-
-      │
-
-      ▼
-
-Interface Streamlit
-
-      │
-
-      ├────────► Dashboard
-
-      │
-
-      └────────► Predição
-
-                      │
-
-                      ▼
-
-              Modelo XGBoost
-
-                      │
-
-                      ▼
-
-                Explicação SHAP
-```
-
----
-
 # 📁 Estrutura do projeto
 
 ```text
 predicao_acidentes_app/
 
+├── .streamlit/
+│   └── config.toml
+│
 ├── app.py
+├── config.py
 ├── requirements.txt
 ├── README.md
 │
 ├── assets/
 │   ├── css/
-│   ├── icons/
 │   └── images/
 │
 ├── components/
+│   ├── ...
 │
 ├── pages/
+│   ├── home.py
+│   ├── dashboard.py
+│   └── predict.py
 │
-├── services/
-│
-├── models/
-│
-├── utils/
-│
-└── tests/
+└── services/
+    ├── loader.py
+    ├── predictor.py
+    ├── dashboard_loader.py
+    ├── feature_engineering.py
+    └── explainer.py
 ```
 
 ---
@@ -240,6 +196,7 @@ predicao_acidentes_app/
 | Plotly | Visualizações |
 | XGBoost | Modelo preditivo |
 | SHAP | Interpretabilidade |
+|Hugging Face Hub | Hospedagem do modelo e dos artefatos |
 | Joblib | Persistência do modelo |
 
 ---
@@ -292,9 +249,7 @@ streamlit run app.py
 
 O treinamento do modelo, preparação dos dados e geração das interpretações SHAP estão disponíveis em um repositório separado.
 
-➡️ **Predição de Gravidade de Acidentes Rodoviários — Machine Learning**
-
-*(Adicionar link posteriormente.)*
+*[Predição de Gravidade de Acidentes Rodoviários — Machine Learning](https://github.com/elainerreis/predicao_acidentes_rodoviarios)*
 
 ---
 
@@ -306,9 +261,7 @@ O treinamento do modelo, preparação dos dados e geração das interpretações
 - [x] Avaliação
 - [x] Explicabilidade com SHAP
 - [x] Aplicação Streamlit
-- [ ] Deploy público
-- [ ] Monitoramento do modelo
-- [ ] API REST
+- [x] Deploy público
 
 ---
 
@@ -318,9 +271,7 @@ O treinamento do modelo, preparação dos dados e geração das interpretações
 
 Graduanda em Ciência de Dados para Negócios
 
-LinkedIn: *(Adicionar)*
-
-GitHub: *(Adicionar)*
+LinkedIn: *[https://www.linkedin.com/in/elainerreiss](https://www.linkedin.com/in/elainerreiss-131a52202/)*
 
 ---
 
