@@ -9,7 +9,6 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-Machine%20Learning-017CEE)
 ![SHAP](https://img.shields.io/badge/SHAP-XAI-orange)
 ![Plotly](https://img.shields.io/badge/Plotly-Visualization-3F4F75?logo=plotly)
-![License](https://img.shields.io/badge/Academic%20Project-TCC-success)
 
 </div>
 
@@ -53,7 +52,6 @@ https://predicaoacidentesapp.streamlit.app/
 
 <p align="center">
   <img src="assets/images/dash1.png" width="48%" alt="Dashboard — parte 1">
-  <img src="assets/images/dash2.png" width="48%" alt="Dashboard — parte 2">
   <img src="assets/images/dash3.png" width="48%" alt="Dashboard — parte 3">
 </p>
 
