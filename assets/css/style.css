@@ -531,7 +531,8 @@ span[data-baseweb="tag"] span {
     background: var(--primary);
 }
 
-[data-testid="stForm"] {
+[data-testid="stForm"],
+.st-key-prediction_form {
     padding: 1.35rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
