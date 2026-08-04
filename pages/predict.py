@@ -222,6 +222,41 @@ def atualizar_proximo_km(
         intervalos=intervalos,
     )
 
+def limpar_kms_armazenados() -> None:
+    """
+    Remove os valores de KM armazenados quando a UF
+    ou a BR é alterada.
+    """
+
+    chaves_km = [
+        chave
+        for chave in st.session_state
+        if chave.startswith("prediction_km_")
+    ]
+
+    for chave in chaves_km:
+        del st.session_state[chave]
+
+
+def atualizar_dependencias_uf() -> None:
+    """
+    Reinicia a BR e o KM quando a UF é alterada.
+    """
+
+    st.session_state.pop(
+        "prediction_br",
+        None,
+    )
+
+    limpar_kms_armazenados()
+
+
+def atualizar_dependencias_br() -> None:
+    """
+    Reinicia o KM quando a BR é alterada.
+    """
+
+    limpar_kms_armazenados()
 
 # =========================================================
 # METADATA
@@ -356,12 +391,6 @@ with st.container(key="prediction_form"):
         st.stop()
 
     # Remove uma BR pertencente à UF selecionada anteriormente.
-    if (
-        "prediction_br" in st.session_state
-        and st.session_state["prediction_br"]
-        not in brs_disponiveis
-    ):
-        del st.session_state["prediction_br"]
 
     with col_br:
         br = st.selectbox(
