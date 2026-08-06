@@ -253,7 +253,7 @@ O treinamento do modelo, preparação dos dados e geração das interpretações
 
 ---
 
-# 🗺 Roadmap
+# Roadmap
 
 - [x] ETL dos dados
 - [x] Engenharia de atributos
