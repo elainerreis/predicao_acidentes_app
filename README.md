@@ -37,7 +37,7 @@ https://predicaoacidentesapp.streamlit.app/
 
 ---
 
-# 📸 Aplicação
+# Aplicação
 
 ## Página Inicial
 
@@ -70,7 +70,7 @@ https://predicaoacidentesapp.streamlit.app/
 
 ---
 
-# ✨ Funcionalidades
+# Funcionalidades
 
 ## Dashboard
 
@@ -108,7 +108,7 @@ e obter:
 
 ---
 
-# 🧠 Modelo de Machine Learning
+# Modelo de Machine Learning
 
 Modelo utilizado:
 
@@ -123,7 +123,7 @@ Variável alvo:
 
 ---
 
-# 📊 Base de dados
+# Base de dados
 
 Fontes utilizadas:
 
@@ -138,7 +138,7 @@ Os dados utilizados são públicos.
 
 ---
 
-# 🏗 Arquitetura
+# Arquitetura
 
 <p align="center">
 
@@ -148,7 +148,7 @@ Os dados utilizados são públicos.
 
 ---
 
-# 📁 Estrutura do projeto
+# Estrutura do projeto
 
 ```text
 predicao_acidentes_app/
@@ -185,7 +185,7 @@ predicao_acidentes_app/
 
 ---
 
-# 🛠 Tecnologias
+# Tecnologias
 
 | Tecnologia | Finalidade |
 |------------|------------|
@@ -201,7 +201,7 @@ predicao_acidentes_app/
 
 ---
 
-# ⚙️ Instalação
+# Instalação
 
 Clone o projeto
 
@@ -245,7 +245,7 @@ streamlit run app.py
 
 ---
 
-# 📂 Repositório de treinamento
+# Repositório de treinamento
 
 O treinamento do modelo, preparação dos dados e geração das interpretações SHAP estão disponíveis em um repositório separado.
 
@@ -265,7 +265,7 @@ O treinamento do modelo, preparação dos dados e geração das interpretações
 
 ---
 
-# 👩‍💻 Autora
+# Autora
 
 **Elaine Regina Reis Sousa**
 
@@ -275,8 +275,4 @@ LinkedIn: *[https://www.linkedin.com/in/elainerreiss](https://www.linkedin.com/i
 
 ---
 
-# 📄 Licença
-
-Projeto desenvolvido para fins acadêmicos como Trabalho de Conclusão de Curso.
-
-Os dados utilizados são públicos e pertencem aos respectivos órgãos governamentais.
+Copyright © 2026 Elaine Regina Reis Sousa.
